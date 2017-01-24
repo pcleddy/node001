@@ -1,0 +1,10 @@
+version: '2'
+services:
+    app:
+        build:
+            context: ./
+            dockerfile: app.docker
+        volumes:
+          - ./public:/usr/src/app
+        ports:
+            - "80:3000"
